@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><title>LatLong App by: Rupinder Matharoo</title>
+<!--Author: Rupinder Singh Matharoo
+    Linkedin: http://ca.linkedin.com/in/matharoo/
+    web: http://dreadbob.blogspot.com
+    App: This web application uses jQuery, JSON, and Google GeoCode API to get the Address Coordinates. The query if valid returns number of results with link and coordinates. App also allows you to reverse geocode the longitude and latitude values to give you the address suggestions returned by the Google geocode API.
+-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/main.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="css/style.min.css">
+<link rel="stylesheet" type="text/css" href="css/boot.min.css">
+
+    </head>
+<body style="min-width:400px;">
+    <div id="headings" style="text-align:center; font-family:courier new;">
+        <h2 style="cursor:default;"><img src="images/icon.jpg" height="50px" width="50px" id="icon">LatLong</h2>
+    </div>
+    <div style="text-align:center; font-family:courier new; font-weight:bold; font-size:14px">
+        <input type="radio" value="getgeo" name="type" id="radgeo" >
+        <label for="radgeo">Get Coordinates</label>
+        <input type="radio" value="reverse" name="type" id="radrev" >
+        <label for="radrev">Get Address</label>
+    </div>
+    <div id="geocoding" style="text-align:center;" class="form-wrapper cf">
+        <input type="text" id="add" placeholder="Enter Country, City or Address" size="35">
+        <button id="getgeo">Search</button>
+    </div>
+    <div id="reverse" style="text-align:center;">
+        <input type="number"  id="lat" placeholder="Lat." maxlength="10">
+        <input type="number" id="lng" placeholder="Long." maxlength="10">
+        <button class="btn btn-success" id="getadd">SEARCH</button>
+        <button class="clear" id="clear2"></button>
+    </div>
+    
+    <table border="1" id="geo" style="width: 80%; margin: 10px auto;">
+    
+    </table>
+    <div id="footer" style="text-align:center; font-family:courier new; min-width:300px;">
+        <h5>Get geo coordinates for any address on the planet!</h5>
+        <h6 style="font-size: 8px">&copy; 2014 Rupinder_Matharoo</h6>
+    </div>
+</body>
+</html>
