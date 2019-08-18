@@ -8,6 +8,7 @@ $(document).ready(function(){
         $("#exportaddr").hide();
         $("#reverse").hide();
         var geotype ="";
+        var chabi="";
         //Geocoding the addresses
         $("#getgeo").click(function(){
             geotype="GeoCoordinates";
@@ -17,7 +18,7 @@ $(document).ready(function(){
                 $('#geo').append('<tr><td>Please enter something!<br></td></tr>');
             }
             else{
-             $.getJSON('http://open.mapquestapi.com/geocoding/v1/address?key=Sf1M5KMV6oofg1zYOG0A2AQkWy8ExwkF&location='+add, function(jd) {
+             $.getJSON('http://open.mapquestapi.com/geocoding/v1/address?key='+chabi+'&location='+add, function(jd) {
                  $("#geo").append('<tr><th>Address</th> <th>Latitude</th><th>Longitude</th></tr>');
                 if(jd.info.statuscode==0 && jd.results[0].locations.length>0){
                   $("#exportcoords").show();
@@ -66,7 +67,7 @@ $(document).ready(function(){
                 $('#geo').append('<tr><td>Please enter both Latitude and Longitude values<br></td></tr>');
             }
             if($("#lat").val()!="" && $("#lng").val()!=""){
-             $.getJSON('http://www.mapquestapi.com/geocoding/v1/reverse?key=Sf1M5KMV6oofg1zYOG0A2AQkWy8ExwkF&location='+$("#lat").val()+','+$("#lng").val()+'&includeRoadMetadata=true&includeNearestIntersection=true', function(jd) {
+             $.getJSON('http://www.mapquestapi.com/geocoding/v1/reverse?key='+chabi+'&location='+$("#lat").val()+','+$("#lng").val()+'&includeRoadMetadata=true&includeNearestIntersection=true', function(jd) {
                  $("#geo").append('<tr><th>Approx. Address</th> <th>Country</th><th>State/Province</th></tr>');
                 if(jd.info.statuscode==0 && jd.results[0].locations.length>0){
                     $("#exportaddr").show();
