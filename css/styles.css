@@ -1,4 +1,8 @@
 table { border-collapse: collapse; font-family: Futura, Arial, sans-serif; font-size:12px; border: 1px solid #777; }
+p{
+  margin: 0;
+    padding: 0;
+}
 caption { font-size: larger; margin: 1em auto; }
 th, td { padding: .25em; }
 th, thead { background: #000; color: #fff; border: 1px solid #000; }
@@ -6,9 +10,23 @@ tr:nth-child(odd) { background: #ccc; }
 tr:hover { background: #aaa; }
 td { border-right: 1px solid #777; }
 #lat,#lng{
-    width:53px;
+    width:100px;
     height: 21px;
     font-size: 11px;
+}
+.csv-btn {
+  background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 12px;
 }
 .clear{
     height: 20px;
@@ -43,7 +61,7 @@ td { border-right: 1px solid #777; }
 
 .cf{
     zoom:1;
-}    
+}
 /* Form wrapper styling */
 .form-wrapper {
     width: 263px;
@@ -60,11 +78,11 @@ td { border-right: 1px solid #777; }
     width: 179px;
     height: 12px;
     padding: 10px 5px;
-    float: left;   
+    float: left;
     font: bold 11px 'lucida sans', 'trebuchet MS', 'Tahoma';
     border: 0;
     background: #eee;
-    border-radius: 3px 0 0 3px;     
+    border-radius: 3px 0 0 3px;
 }
 
 .form-wrapper input:focus {
@@ -89,7 +107,7 @@ td { border-right: 1px solid #777; }
     color: #999;
     font-weight: normal;
     font-style: italic;
-}   
+}
 
 /* Form submit button */
 .form-wrapper button {
@@ -105,18 +123,18 @@ td { border-right: 1px solid #777; }
     color: #fff;
     text-transform: uppercase;
     background: #d83c3c;
-    border-radius: 0 3px 3px 0;     
+    border-radius: 0 3px 3px 0;
     text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
-}  
+}
 
-.form-wrapper button:hover{    
+.form-wrapper button:hover{
     background: #e54040;
-}  
+}
 
 .form-wrapper button:active,
-.form-wrapper button:focus{  
+.form-wrapper button:focus{
     background: #c42f2f;
-    outline: 0;  
+    outline: 0;
 }
 
 .form-wrapper button:before { /* left arrow */
@@ -136,9 +154,9 @@ td { border-right: 1px solid #777; }
 .form-wrapper button:focus:before,
 .form-wrapper button:active:before{
         border-right-color: #c42f2f;
-}     
+}
 
 .form-wrapper button::-moz-focus-inner { /* remove extra button spacing for Mozilla Firefox */
     border: 0;
     padding: 0;
-}   
+}

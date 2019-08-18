@@ -8,7 +8,7 @@
 -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="css/style.min.css">
+<link rel="stylesheet" type="text/css" href="css/styles.css">
 <link rel="stylesheet" type="text/css" href="css/boot.min.css">
 
     </head>
@@ -26,15 +26,16 @@
         <input type="text" id="add" placeholder="Enter Country, City or Address" size="35">
         <button id="getgeo">Search</button>
     </div>
+    <div style="text-align:center"><button class="csv-btn" id="exportcoords">Export to CSV</button></div>
     <div id="reverse" style="text-align:center;">
         <input type="number"  id="lat" placeholder="Lat." maxlength="10">
         <input type="number" id="lng" placeholder="Long." maxlength="10">
         <button class="btn btn-success" id="getadd">SEARCH</button>
         <button class="clear" id="clear2"></button>
     </div>
-    
-    <table border="1" id="geo" style="width: 80%; margin: 10px auto;">
-    
+    <div style="text-align:center"><button class="csv-btn" id="exportaddr">Export to CSV</button></div>
+    <table border="1" class="dataTable" id="geo" style="width: 80%; margin: 10px auto;">
+
     </table>
     <div id="footer" style="text-align:center; font-family:courier new; min-width:300px;">
         <h5>Get geo coordinates for any address on the planet!</h5>
